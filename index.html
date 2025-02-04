@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capibaras en el Mundo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#introduccion">Introducción</a>
+            <a href="#novedades">Novedades</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#redes">Redes Sociales</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Capivara%28Hydrochoerus_hydrochaeris%29.jpg/800px-Capivara%28Hydrochoerus_hydrochaeris%29.jpg" alt="Capibara en su hábitat natural">
+                </div>
+                <div class="card-description">
+                    <h3>Capibaras en Sudamérica</h3>
+                    <p>Los capibaras son nativos de Sudamérica, donde viven en grupos cerca de cuerpos de agua. Son los roedores más grandes del mundo.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://s1.elespanol.com/2024/02/05/actualidad/830427673_239689135_1706x960.jpg" alt="Capibara con otros animales">
+                </div>
+                <div class="card-description">
+                    <h3>Vida Social</h3>
+                    <p>Conocidos por su naturaleza sociable, los capibaras conviven pacíficamente con otras especies y son excelentes nadadores.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://img.freepik.com/fotos-premium/capibara-kimono-japones-tradicional-flores-rosas-cabello-rodeado-rosas-rosas-mariposas_559896-27584.jpg" alt="Capibara en Japón">
+                </div>
+                <div class="card-description">
+                    <h3>Capibaras en Japón</h3>
+                    <p>En Japón, los capibaras son famosos por tomar baños termales durante el invierno, convirtiéndose en una atracción turística.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Añadir efecto suave al hacer scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Efecto hover en las tarjetas
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            card.addEventListener('mouseout', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
